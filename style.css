@@ -20,6 +20,9 @@ h1 {
 	max-width: 600px;
 }
 
-span {
-	color: white;
+#stripe {
+	background: #fff;
+	height: 30px;
+	text-align:center;
+	color: black;
 }
