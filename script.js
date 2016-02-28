@@ -1,5 +1,5 @@
-var colors = generateRandomColors(6);
-
+var numberOfSquares = 6;
+var colors = generateRandomColors(numberOfSquares);
 var squares = document.querySelectorAll(".square");
 var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
@@ -9,10 +9,12 @@ var resetButton = document.querySelector("#resetButton");
 var easyButton = document.querySelector("#easyButton");
 var hardButton = document.querySelector("#hardButton");
 
+
 easyButton.addEventListener("click", function(){
 	hardButton.classList.remove("selected");
 	easyButton.classList.add("selected");
-	colors = generateRandomColors(3);
+	numSquares = 3
+	colors = generateRandomColors(numSquares);
 	pickedColor = pickColor();
 	colorDisplay.textContent = pickedColor;
 	for (var i = 0; i < squares.length; i++){
@@ -43,11 +45,13 @@ resetButton.addEventListener("click", function(){
 	pickedColor = pickColor();
 	//change colorDisplay to match picked color
 	colorDisplay.textContent = pickedColor;
+	messageDisplay.textContent = "";
+	this.textContent="New Colors";
 	//change colors of squares
 	for(var i = 0; i < squares.length; i++){
 		squares[i].style.background = colors[i];
 	}
-	h1.style.background = "#232323";
+	h1.style.background = "steelblue";
 });
 
 colorDisplay.textContent = pickedColor;
